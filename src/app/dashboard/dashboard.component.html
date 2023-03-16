@@ -1,0 +1,10 @@
+<p>dashboard works!</p>
+<span>Name</span>
+<input type="text" [formControl]="nameCtrl">
+<hr>
+<div class="dashboard-header-wrapper">
+    <a [routerLink]="['/dashboard', { outlets: { subtab: ['item'] } }]">Item dashboard</a>
+    <a [routerLink]="['/dashboard', { outlets: { subtab: ['stock'] } }]">Stock dashboard</a>
+</div>
+<router-outlet name="subtab"></router-outlet>
+<hr>
